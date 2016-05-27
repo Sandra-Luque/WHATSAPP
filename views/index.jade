@@ -1,0 +1,68 @@
+doctype 5
+html
+  head
+    title= title 
+    meta(name="viewport",content="width=device-width,initial-scale=1.0")
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stilos/style.css')
+    link(rel='stylesheet', href='/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/ionicons.min.css')
+  body   
+  .head
+    .container
+      block content 
+        .row#pfila
+          #formModal.modal
+            .modal-dialog
+              .modal-content
+                modal-header
+                  h2.title-modal
+                .modal-body
+                  p.formModal
+                .modal-footer
+          .col-md-3#usuario
+            .panel.panel-default
+              .panel-heading
+                 .contimg-chat
+                    .img-chat
+                    .cont-icon1
+                      i.ion-android-textsms
+                      i.fa.fa-ellipsis-v
+                  .icon-msg-2
+              .input-group#Search 
+                span.input-group-btn
+                  buttom.btn.btn-defaul.ion-ios-search-strong
+                input.from-control(placeholder="Search for...")
+              .panel-body#containerUsers
+                #chatUsers
+          .col-md-9#mensages
+            .panel.panel-default
+              .panel-heading
+                  .contheadMessages 
+                    strong Laboratoria Peru
+                    .contimgMessages
+                  .cont-icon2
+                    button.btn 
+                      i.ion-android-attach
+                    button.btn 
+                      i.fa.fa-ellipsis-v
+              .panel#cont-Messages
+                .panel#containerMessages
+                  #chatMsgs
+          
+            #containerSendMessages
+              .col-sm-1
+                button.btn 
+                  i.ion-android-happy
+              .col-sm-9
+                input.scripMessage.message.form-control(type="text",placeholder="Escribe tu mensaje aqui")
+              .col-sm-1
+                button.btn-send.btn.btn-large.btn-block.sendMsg() Enviar
+              .col-sm-1
+                button.btn 
+                  i.ion-android-microphone
+      block footer
+            script(src='/socket.io/socket.io.js')
+            script(type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+            script(type='text/javascript' src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+            script(type='text/javascript' src='/javascripts/funciones.js')
